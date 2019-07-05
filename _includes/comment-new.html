@@ -1,21 +1,22 @@
-<h3>Respond to this</h3>
+<h3>Kommentieren</h3>
 <form action="/fake" method="post" id="commentform" class="form-horizontal">
   <fieldset id="commentfields">
     <input name="redirect" type="hidden" value="{{ site.url }}/thanks">
     <input name="post_id" type="hidden" value="{{ slug }}">
     <input name="comment-site" type="hidden" value="{{ site.url }}">
-    <textarea name="message" id="message" placeholder="Continue the discussion."></textarea>
+    <textarea name="message" id="message" placeholder="Diskussion anzetteln..." cols="50" rows="8"></textarea><br />
 
-    <label for="name">Name/alias <span>(Required, displayed)</span></label>
-    <input type="text" name="name" id="name" placeholder="Name" />
+    <label for="name">Name/alias <span>(Erforderlich, wird angezeigt)</span></label>
+    <input type="text" name="name" id="name" placeholder="Name" /><br />
 
-    <label for="email">Email <span>(Required, not shown)</span></label>
-    <input type="text" name="email" id="email" placeholder="myemail@somedomain.com" />
+    <label for="email">Email <span>(Erforderlich, wird nicht angezeigt)</span></label>
+    <input type="text" name="email" id="email" placeholder="myemail@somedomain.com" /><br />
+ 
+    <label for="url">Webseite <span>(Optional, wird angezeigt)</span></label>
+    <input type="text" name="url" id="url" placeholder="https://mywebsite.com" /><br />
+    <br />
 
-    <label for="url">Website <span>(Optional, displayed)</span></label>
-    <input type="text" name="url" id="url" placeholder="https://mywebsite.com" />
-
-    <button onclick="setupForm()" type="button" class="btn btn-primary" id="commentbutton">Leave response</button>
+    <button onclick="setupForm()" type="button" class="btn btn-primary" id="commentbutton">Kommentar abschicken</button>
   </fieldset>
 </form>
 <script>
@@ -26,19 +27,19 @@
       var requiredIds = [ 'message', 'email', 'name']
       var missing = requiredIds.filter(id => document.getElementById(id).value.length < 3)
       if (missing.length > 0) {
-        status.innerText = 'Some required fields are missing - (' + missing.join(', ') + ')'
+        status.innerText = 'Bitte hinterlasse noch folgende Informationen: ' + missing.join(', ') 
         return
       }
 
       var button = document.getElementById('commentbutton')
-      if (button.innerText != 'Confirm comment') {
-        button.innerText = 'Confirm comment'
+      if (button.innerText != 'Kommentar bestätigen') {
+        button.innerText = 'Kommentar bestätigen'
         return
       }
 
       var form = document.getElementById('commentform')
       form.action = '{{ site.comments.receiver }}'
-      button.innerText = 'Posting...'
+      button.innerText = 'Schicke ab...'
       button.disabled = true
       form.submit()
       var fields = document.getElementById('commentfields')                                         

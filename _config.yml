@@ -32,17 +32,13 @@ plugins:
   - jekyll-feed
 
 comments:
+    enabled: true
+    show_count: true
     receiver: https://jekyllcommentfunction.azurewebsites.net/api/PostComment
 
-defaults:
-  -
-    scope:
-      path: ''
-      type: pages
-    values:
-      layout: page
-      author: mephisztoe
-      commenting: open
+emptyArray: [] # Leave this here.
+
+defaults: 
   -
     scope:
       path: '_posts'

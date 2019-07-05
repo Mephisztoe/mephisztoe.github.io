@@ -21,7 +21,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   bereithält. Geht mir auch so. Manchmal habe ich das Bedürfnis, solche Erkenntnisse
   aufzuschreiben. Mir hilft das und vielleicht hat mein externes Gedächtnis auch für Dich einen Nutzen.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://mephisztoe.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: mephisztoe
 github_username:  mephisztoe
 

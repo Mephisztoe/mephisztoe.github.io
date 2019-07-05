@@ -2,6 +2,7 @@
 layout: post
 title: FontIcons in Xamarin.Forms 4.0 Shell Tabs einsetzen
 author: Mephisztoe
+commenting: open
 ---
 
 Vor kurzem habe ich einen spannenden Blogartikel von James Montemagno gelesen, in dem er erläutert, wie sich FontIcons gan einfach in Xamarin.Forms 4 nutzen lassen. Den Artikel findest Du [hier][jm-xf4-fonticons]. Nachdem ich die Material Design Icons in meine Projekte importiert und Dank der Website [IconFont2Code][icon-font-2-code] eine Klasse für benannte Glyphen erstellt und eingebunden habe, musste ich aber feststellen, dass ich es nicht schaffe, FontIcons für Tabs in einer Xamarin Shell anzuzeigen.

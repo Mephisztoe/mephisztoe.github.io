@@ -2,6 +2,7 @@
 layout: post
 title: Azure Mobile Apps Client API und Azure Active Directory B2C. Geht das?
 author: Mephisztoe
+commenting: open
 ---
 
 Entwickler mobiler Lösungen auf Basis von Xamarin Forms erleben derzeit eine besondere Situation insofern sie Azure App Services einsetzen. Der Grund dafür ist u.a. der, dass es in relativ kurzer Zeit zu mehreren Rebrandings bei Microsoft gekommen ist. Leider liest Du dann nicht selten so etwas:

@@ -31,6 +31,33 @@ theme: minima
 plugins:
   - jekyll-feed
 
+comments:
+    receiver: https://jekyllcommentfunction.azurewebsites.net/api/PostComment
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: pages
+    values:
+      layout: page
+      author: mephisztoe
+      commenting: open
+  -
+    scope:
+      path: '_posts'
+      type: posts
+    values:
+      layout: post
+      author: mephisztoe
+      commenting: open
+
+authors:
+  mephisztoe:
+    name: Christian jacob
+    email: mephisztoe@live.de
+    url: https://mephisztoe.github.io
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
